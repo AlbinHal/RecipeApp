@@ -8,7 +8,7 @@
     Title="RecipeApp">
 
     <ShellContent
-        Title="Home"
+        Title="Recipes"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

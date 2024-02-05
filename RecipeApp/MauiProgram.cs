@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using RecipeApp.ViewModels;
+using RecipeApp.Views;
 
 namespace RecipeApp
 {
@@ -15,8 +17,14 @@ namespace RecipeApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddTransient<DetailsPage>();
+            builder.Services.AddTransient<DetailViewModel>();
+
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
