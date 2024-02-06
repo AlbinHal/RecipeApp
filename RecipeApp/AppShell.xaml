@@ -6,10 +6,29 @@
     xmlns:local="clr-namespace:RecipeApp"
     Shell.FlyoutBehavior="Disabled"
     Title="RecipeApp">
+    <TabBar>
+        <Tab Title="Recipes"
+             Icon="chefhat">
+             <ShellContent
+                Title="Recipes"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />          
+        </Tab>
+        <Tab Title="About"
+             Icon="info">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:Views.AboutPage}"
+                Title="About"
+                Route="AboutPage"/>
+        </Tab>
+        <Tab Title="Map"
+             Icon="pointonmap">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:Views.MapPage}"
+                Title="Map"
+                Route="MapPage"/>
+        </Tab>
 
-    <ShellContent
-        Title="Recipes"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
 
+    </TabBar>
 </Shell>
